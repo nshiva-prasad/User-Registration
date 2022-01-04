@@ -67,12 +67,11 @@ def otp(self):
         if sql_data is None :
             otp.random_otp = random.randint(100000,999999)
 
-            FROM = "email address" #put your email address
+            FROM = "email address" #put email address from which otp should be sent
+            pwd = "password" #put your mail password here
             TO = otp.email_input
             SUBJECT = "OTP mail"
             TEXT = f"here is the otp for completing  the registartion: {otp.random_otp}"
-
-            pwd = "password" #put your gmail password here
 
             message = "Subject: %s \n\n%s" % (SUBJECT, TEXT)
             print(message)
